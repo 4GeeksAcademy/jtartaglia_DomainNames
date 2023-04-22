@@ -5,25 +5,34 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  let pronoun = ["my", "your"];
-  let adjective = ["wacky", "goofy", "silly"];
-  let noun = ["code", "home", "market", "webpage"];
-  let extension = [".com", ".es"];
+function getDomainNames(pronoun, adjective, noun, extension) {
+  let domainNames = "";
 
-  function getDomainNames(array1, array2, array3, array4) {
-    let domainNames = "";
-
-    for (let i = 0; i < array1.length; i++) {
-      for (let j = 0; j < array2.length; j++) {
-        for (let k = 0; k < array3.length; k++) {
-          for (let l = 0; l < array4.length; l++) {
-            domainNames += `${array1[i]}${array2[j]}${array3[k]}${array4[l]}\n`;
-          }
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adjective.length; j++) {
+      for (let k = 0; k < noun.length; k++) {
+        for (let l = 0; l < extension.length; l++) {
+          domainNames += `<p>${pronoun[i]}${adjective[j]}${noun[k]}${extension[l]}</p>`;
         }
       }
     }
-    console.log(domainNames);
   }
-  getDomainNames(pronoun, adjective, noun, extension);
+  return domainNames;
+}
+
+const pronoun = ["my", "your"];
+const adjective = ["goofy", "perfect"];
+const noun = ["code", "market", "webpage"];
+const extension = [".com", ".es"];
+
+window.onload = () => {
+  document.querySelector("#btn").addEventListener("click", () => {
+    document.querySelector("#showDomainNames").innerHTML = getDomainNames(
+      pronoun,
+      adjective,
+      noun,
+      extension
+    );
+  });
+  console.log("Hello");
 };
