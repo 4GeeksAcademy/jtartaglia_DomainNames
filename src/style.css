@@ -1,5 +1,15 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-#showDomainNames {
-  column-count: 3;
+@media (min-width: 992px) {
+  #showDomainNames {
+    column-count: 3;
+    column-gap: 1em;
+  }
+}
+
+@media (max-width: 991px) {
+  #showDomainNames {
+    column-count: 1;
+    column-gap: 0;
+  }
 }

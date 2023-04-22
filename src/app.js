@@ -12,7 +12,7 @@ function getDomainNames(pronoun, adjective, noun, extension) {
     for (let j = 0; j < adjective.length; j++) {
       for (let k = 0; k < noun.length; k++) {
         for (let l = 0; l < extension.length; l++) {
-          domainNames += `<p>${pronoun[i]}${adjective[j]}${noun[k]}${extension[l]}</p>`;
+          domainNames += `<p class="lead">${pronoun[i]}${adjective[j]}${noun[k]}${extension[l]}</p>`;
         }
       }
     }

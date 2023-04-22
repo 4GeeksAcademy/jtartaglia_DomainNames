@@ -12,28 +12,46 @@
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Welcome to our domain name search page!</h1>
-      <p>
-        <a
-          id="btn"
-          class="btn btn-danger"
-          data-bs-toggle="collapse"
-          href="#showDomainNames"
-          role="button"
-          aria-expanded="false"
-          aria-controls="showDomainNames"
-        >
-          Show domain names!
-        </a>
-      </p>
+    <div class="container-fluid py-4 text-center">
+      <header class="pb-3 mb-4 border-bottom">
+        <div class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="fs-4 fw-semibold"> Domains for you</span>
+        </div>
+      </header>
+
+      <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid">
+          <h1 class="display-5 fw-bold">Searching for a fresh domain?</h1>
+          <p class="col-md-12 fs-4 mb-4">
+            Remember that a good domain name is important for making your
+            website easily recognizable and memorable for your visitors. Let's
+            start the search for the perfect domain name for you!
+          </p>
+
+          <p>
+            <a
+              id="btn"
+              class="btn btn-lg btn-danger"
+              data-bs-toggle="collapse"
+              href="#showDomainNames"
+              role="button"
+              aria-expanded="false"
+              aria-controls="showDomainNames"
+            >
+              Show domain names!
+            </a>
+          </p>
+        </div>
+      </div>
+
       <div class="collapse" id="showDomainNames">
         <div class="card card-body"></div>
       </div>
 
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by Julia
+      <div class="sticky-bottom p-4 bt-5 lead text-danger">
+        Made with ❤️ by <b>Julia</b>
       </div>
     </div>
   </body>
